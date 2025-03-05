@@ -25,3 +25,12 @@ try {
 } catch (error) {
     console.error("Expected Error:", error.message);
 }
+
+
+console.log("\nTesting Editing Non-Existent Contact:");
+try {
+    let updatedContact = new Contact("Random", "Person", "Street", "City", "State", "123456", "1235468795", "random@example.com");
+    addressBook.editContact("Random", "Person", updatedContact);
+} catch (error) {
+    console.error("Expected Error:", error.message);
+}
